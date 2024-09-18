@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete Person</title>
+</head>
+<body>
+
+<h1>
+    Delete Person
+</h1>
+
+<form action="" method="post">
+    <p>
+        Are you sure you want to delete the person with the following data?
+    </p>
+    <p>
+        Name: {{ persona.nombre }}
+    </p>
+    <p>
+        Last Name: {{ persona.apellidos }}
+    </p>
+    <p>
+        Age: {{ persona.edad }}
+    </p>
+    <a href="{% url 'index' %}">Back to index</a>
+    <button type="submit">Delete</button>
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

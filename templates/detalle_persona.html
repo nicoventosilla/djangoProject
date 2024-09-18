@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalle Persona</title>
+</head>
+<body>
+<h1>Person Detail</h1>
+<div>
+    <p>ID: {{ persona.id }}</p>
+    <p>Name: {{ persona.nombre }}</p>
+    <p>Last Name: {{ persona.apellidos }}</p>
+    <p>Date of birth: {{ persona.fecha_nacimiento }}</p>
+    <p>Age: {{ persona.edad }}</p>
+    <p>Email: {{ persona.email }}</p>
+</div>
+<a href="{% url 'index' %}">Back to index</a>
+</body>
+</html>

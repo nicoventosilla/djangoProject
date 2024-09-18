@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+<h1>Welcome to the people management system</h1>
+<div>
+    Number of people: {{ numero_personas }}
+</div>
+<div>
+    <a href="nueva_persona">Add new person</a>
+</div>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for persona in personas %}
+            <tr>
+                <td>{{ persona.id }}</td>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.apellidos }}</td>
+                <td>{{ persona.edad }}</td>
+                <td>
+                    <a href="detalle_persona/{{ persona.id }}">Detail</a>
+                    <a href="editar_persona/{{ persona.id }}">Edit</a>
+                    <a href="eliminar_persona/{{ persona.id }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
